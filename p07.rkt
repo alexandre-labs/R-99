@@ -10,11 +10,18 @@
 ;;     Hint: Use the predefined functions list and append.
 
 (define (my-flatten a-list)
-  a-list)
+  (println a-list)
+  (cond
+    [(eq? a-list '()) '()]
+    [(list? (car a-list)) (cons (car (car a-list)) (my-flatten (cdr a-list)))]
+    [else (cons (car a-list) (my-flatten (cdr a-list)))]))
 
 
 (require rackunit)
 
 (check-equal? (my-flatten '()) '())
 (check-equal? (my-flatten '(1)) '(1))
+(check-equal? (my-flatten '((2))) '(2))
 (check-equal? (my-flatten '(1 (2))) '(1 2))
+(check-equal? (my-flatten '((2) 3 4 5)) '(2 3 4 5))
+(check-equal? (my-flatten '(a (b (c d) e))) '(a b c d e))
