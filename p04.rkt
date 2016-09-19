@@ -2,6 +2,8 @@
 
 ;; P04 (*) Find the number of elements of a list.
 
+(provide my-length)
+
 (define (my-length a-list)
   (cond
     [(eq? a-list '()) 0]
