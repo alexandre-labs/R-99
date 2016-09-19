@@ -5,6 +5,8 @@
 ;;     * (my-last '(a b c d))
 ;;     (D)
 
+(provide my-last)
+
 (define (my-last a-list)
   (cond
     [(eq? '() a-list) '()]
