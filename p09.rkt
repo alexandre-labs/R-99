@@ -44,4 +44,4 @@
 (check-equal? (pack '(1)) '(1))
 (check-equal? (pack '(1 2)) '(1 2))
 (check-equal? (pack '(1 1 2)) '((1 1) 2))
-;; (check-equal? (pack '(a a a a b c c a a d e e e e)) '((a a a a) (b) (c c) (a a) (d) (e e e e)))
+(check-equal? (pack '(a a a a b c c a a d e e e e)) '((a a a a) (b) (c c) (a a) (d) (e e e e)))
