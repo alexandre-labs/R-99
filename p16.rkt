@@ -16,7 +16,7 @@
 (define (my-drop a-list nth)
   (cond
     [(eq? a-list '()) '()]
-    [else (map cdr (filter (lambda (item) (not (multiple? (car item) nth))) (enumerate a-list)))]))
+    [else (map cdr (filter (λ (item) (not (multiple? (car item) nth))) (enumerate a-list)))]))
 
 
 (require rackunit)
