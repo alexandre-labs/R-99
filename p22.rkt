@@ -6,6 +6,8 @@
 ;;    * (range 4 9)
 ;;    (4 5 6 7 8 9)
 
+(provide my-range)
+
 (define (my-range start end)
   (cond
     [(not (<= start end)) '()]

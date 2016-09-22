@@ -8,6 +8,8 @@
 ;;
 ;;     Hint: Use the built-in random number generator and the result of problem P20.
 
+(provide rnd-select)
+
 (define (extract a-list pos)
   (cond
     [(eq? a-list '()) null]
