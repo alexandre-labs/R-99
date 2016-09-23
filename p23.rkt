@@ -12,7 +12,7 @@
 
 (define (extract a-list pos)
   (cond
-    [(eq? a-list '()) null]
+    [(or (eq? a-list '()) (> pos (length a-list))) null]
     [(eq? pos 1) (car a-list)]
     [else (extract (cdr a-list) (- pos 1))]))
 
@@ -20,7 +20,7 @@
   (cond
     [(eq? a-list '()) '()]
     [(eq? num 0) '()]
-    [else (cons (extract a-list (random (length a-list))) (rnd-select a-list (- num 1)))]))
+    [else (cons (extract a-list (random 1 (length a-list))) (rnd-select a-list (- num 1)))]))
 
 
 (require rackunit)
