@@ -5,6 +5,8 @@
 ;;     * (is-prime 7)
 ;;     T
 
+(provide sieve)
+
 (define (max-num num)
   (integer-sqrt num))
 
