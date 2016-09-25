@@ -6,15 +6,12 @@
 ;;     T
 
 (define (max-num num)
-  ;; The max number to be checked in sieve "filters".
   (integer-sqrt num))
 
 (define (limit-value-range num)
-  ;; Range of numbers from 2 to limit value
   (range 2 (+ num 1)))
 
 (define (remove-multiple num a-list)
-  ;; Remove all multiples of a number in a list
   (cond
     [(eq? a-list '()) '()]
     [(eq? (modulo (car a-list) num) 0) (remove-multiple num (cdr a-list))]
