@@ -8,8 +8,10 @@
 
 (require "p32.rkt")
 
+(provide coprime)
+
 (define (coprime number1 number2)
-  (= (gcd number1 number2) 1))
+  (= (my-gcd number1 number2) 1))
 
 
 (require rackunit)

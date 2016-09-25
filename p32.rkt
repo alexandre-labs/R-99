@@ -6,13 +6,15 @@
 ;;     * (gcd 36 63)
 ;;     9
 
-(define (gcd number1 number2)
+(provide my-gcd)
+
+(define (my-gcd number1 number2)
   (cond
     [(eq? number2 0) number1]
-    [else (gcd number2 (modulo number1 number2))]))
+    [else (my-gcd number2 (modulo number1 number2))]))
 
 
 (require rackunit)
 
-(check-equal? (gcd 36 63) 9)
-(check-equal? (gcd 348 156) 12)
+(check-equal? (my-gcd 36 63) 9)
+(check-equal? (my-gcd 348 156) 12)
