@@ -14,13 +14,11 @@
 
 (require "p33.rkt")
 
-
 (define (phi number-range m)
   (cond
     [(eq? number-range '()) '()]
     [(eq? (coprime (car number-range) m) #f) (phi (cdr number-range) m)]
     [else (cons (car number-range) (phi (cdr number-range) m))]))
-
 
 (define (totient-phi m)
   (length (phi (range 1 m) m)))
