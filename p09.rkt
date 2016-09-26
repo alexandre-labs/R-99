@@ -23,7 +23,6 @@
     [(not (eq? (car a-list) (car (cdr a-list)))) (cdr a-list)]
     [else (pack-skip (cdr a-list))]))
 
-
 (define (pack a-list)
   (cond
     [(eq? a-list '()) '()]
