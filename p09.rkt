@@ -7,6 +7,8 @@
 ;;     * (pack '(a a a a b c c a a d e e e e))
 ;;     ((A A A A) (B) (C C) (A A) (D) (E E E E))
 
+(provide pack)
+
 (define (pack-aux a-list)
   (cond
     [(eq? a-list '()) '()]
@@ -34,3 +36,4 @@
 (check-equal? (pack '(1)) '((1)))
 (check-equal? (pack '(1 1 2)) '((1 1) (2)))
 (check-equal? (pack '(1 1 2 1 1)) '((1 1) (2) (1 1)))
+(check-equal? (pack '(a a a a b c c a a d e e e e)) '((a a a a) (b) (c c) (a a) (d) (e e e e)))
