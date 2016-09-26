@@ -5,6 +5,8 @@
 ;;     * (repli '(a b c) 3)
 ;;     (A A A B B B C C C)
 
+(provide repli-item)
+
 (define (repli-item item times)
   (cond
     [(eq? times 0) item]
