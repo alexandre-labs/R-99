@@ -7,8 +7,7 @@
 ;;     * (split '(a b c d e f g h i k) 3)
 ;;     ( (A B C) (D E F G H I K))
 
-(provide split-first-part)
-(provide split-rest)
+(provide split-first-part split-rest)
 
 (define (split-first-part a-list size)
   (cond
