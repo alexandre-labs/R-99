@@ -1,6 +1,6 @@
 #lang racket
 
-(require "../p02.rkt")
+(require "../working-with-lists/p02.rkt")
 (require rackunit)
 
 (check-equal? (my-but-last '()) '())
