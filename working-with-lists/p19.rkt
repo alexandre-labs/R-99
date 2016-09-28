@@ -25,4 +25,6 @@
 
 (check-equal? (rotate '() 3) '())
 (check-equal? (rotate '(a b c) -3) '(a b c))
-(check-equal? (rotate '(a b c) 3) '(c b a))
+(check-equal? (rotate '(a b c) 3) '(a b c))
+(check-equal? (rotate '(a b c d e f g h) 3) '(d e f g h a b c))
+(check-equal? (rotate '(a b c d e f g h) -2) '(g h a b c d e f))
